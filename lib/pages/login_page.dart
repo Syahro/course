@@ -1,3 +1,4 @@
+import 'package:course/pages/beranda_page.dart';
 import 'package:course/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -173,19 +174,31 @@ class LoginPage extends StatelessWidget {
                   SizedBox(
                     height: 16,
                   ),
-                  Container(
-                    height: 48,
-                    width: 328,
-                    decoration: BoxDecoration(
-                      color: blueColor,
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Login In to My Account',
-                        style: regularTextStyle.copyWith(
-                          fontSize: 16,
-                          color: whiteColor,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return BerandaPage();
+                          },
+                        ),
+                      );
+                    },
+                    child: Container(
+                      height: 48,
+                      width: 328,
+                      decoration: BoxDecoration(
+                        color: blueColor,
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Login In to My Account',
+                          style: regularTextStyle.copyWith(
+                            fontSize: 16,
+                            color: whiteColor,
+                          ),
                         ),
                       ),
                     ),
