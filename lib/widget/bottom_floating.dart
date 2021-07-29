@@ -1,8 +1,21 @@
+import 'package:course/pages/beranda_page.dart';
+import 'package:course/pages/explorasi_page.dart';
 import 'package:course/theme.dart';
 import 'package:course/widget/icon_bottom_floating.dart';
 import 'package:flutter/material.dart';
 
 class BottomFloating extends StatelessWidget {
+  final bool isHome;
+  final bool isExplore;
+  final bool isTalent;
+  final bool isAccount;
+
+  BottomFloating({
+    this.isHome,
+    this.isExplore,
+    this.isTalent,
+    this.isAccount,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,25 +38,39 @@ class BottomFloating extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IconBottomFloating(
-              imageUrl: 'assets/home.png',
-              menuName: 'Home',
-              isActive: true,
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return BerandaPage();
+                }));
+              },
+              child: IconBottomFloating(
+                imageUrl: 'assets/home.png',
+                menuName: 'Home',
+                isActive: isHome,
+              ),
             ),
-            IconBottomFloating(
-              imageUrl: 'assets/explore.png',
-              menuName: 'Explorasi',
-              isActive: false,
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ExplorasiPage();
+                }));
+              },
+              child: IconBottomFloating(
+                imageUrl: 'assets/explore.png',
+                menuName: 'Explorasi',
+                isActive: isExplore,
+              ),
             ),
             IconBottomFloating(
               imageUrl: 'assets/talent.png',
               menuName: 'Talenta',
-              isActive: false,
+              isActive: isTalent,
             ),
             IconBottomFloating(
               imageUrl: 'assets/akun.png',
               menuName: 'Akun',
-              isActive: false,
+              isActive: isAccount,
             ),
           ],
         ),
