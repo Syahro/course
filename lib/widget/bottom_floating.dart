@@ -1,5 +1,6 @@
 import 'package:course/pages/beranda_page.dart';
 import 'package:course/pages/explorasi_page.dart';
+import 'package:course/pages/talent_page.dart';
 import 'package:course/theme.dart';
 import 'package:course/widget/icon_bottom_floating.dart';
 import 'package:flutter/material.dart';
@@ -62,10 +63,17 @@ class BottomFloating extends StatelessWidget {
                 isActive: isExplore,
               ),
             ),
-            IconBottomFloating(
-              imageUrl: 'assets/talent.png',
-              menuName: 'Talenta',
-              isActive: isTalent,
+            InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return TalentPage();
+                }));
+              },
+              child: IconBottomFloating(
+                imageUrl: 'assets/talent.png',
+                menuName: 'Talenta',
+                isActive: isTalent,
+              ),
             ),
             IconBottomFloating(
               imageUrl: 'assets/akun.png',

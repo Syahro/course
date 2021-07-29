@@ -14,6 +14,7 @@ class BerandaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: whiteColor,
       floatingActionButton: BottomFloating(
         isHome: true,
         isExplore: false,

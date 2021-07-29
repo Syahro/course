@@ -8,6 +8,7 @@ class ExplorasiPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: whiteColor,
       floatingActionButton: BottomFloating(
         isHome: false,
         isExplore: true,
