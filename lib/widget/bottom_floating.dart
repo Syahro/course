@@ -1,3 +1,4 @@
+import 'package:course/pages/akun_kelas_page.dart';
 import 'package:course/pages/beranda_page.dart';
 import 'package:course/pages/explorasi_page.dart';
 import 'package:course/pages/talent_page.dart';
@@ -75,10 +76,25 @@ class BottomFloating extends StatelessWidget {
                 isActive: isTalent,
               ),
             ),
-            IconBottomFloating(
-              imageUrl: 'assets/akun.png',
-              menuName: 'Akun',
-              isActive: isAccount,
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AkunKelasPage(
+                        isClass: true,
+                        isMadeBy: false,
+                      );
+                    },
+                  ),
+                );
+              },
+              child: IconBottomFloating(
+                imageUrl: 'assets/akun.png',
+                menuName: 'Akun',
+                isActive: isAccount,
+              ),
             ),
           ],
         ),

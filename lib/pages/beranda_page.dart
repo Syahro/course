@@ -1,6 +1,7 @@
 import 'package:course/theme.dart';
 import 'package:course/widget/bottom_floating.dart';
 import 'package:course/widget/header.dart';
+import 'package:course/widget/my_class.dart';
 import 'package:course/widget/popular_class_card.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_images/carousel_images.dart';
@@ -123,67 +124,13 @@ class BerandaPage extends StatelessWidget {
                         color: greyColor,
                       ),
                     ),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(10, 8, 10, 8),
-                      child: Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(15),
-                            child: Image.asset(
-                              'assets/class3.png',
-                              width: 80,
-                              height: 66,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'UI/UX Design With\nFigma',
-                                style: boldItalicTextStyle.copyWith(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: blackColor,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 17,
-                              ),
-                              Row(
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Image.asset(
-                                      'assets/mentor1.png',
-                                      width: 16,
-                                      height: 16,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 4,
-                                  ),
-                                  Text(
-                                    'Angga Risky',
-                                    style: regularTextStyle.copyWith(
-                                      fontSize: 12,
-                                      color: greyColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Spacer(),
-                          Image.asset(
-                            'assets/graph1.png',
-                            width: 51,
-                            height: 51,
-                          ),
-                        ],
-                      ),
+                    child: MyClass(
+                      imageUrl: 'assets/class3.png',
+                      firstName: 'UI/UX Design With',
+                      secondName: 'Figma',
+                      imageUrlMentor: 'assets/mentor1.png',
+                      nameMentor: 'Angga Risky',
+                      isHalf: false,
                     ),
                   ),
                   SizedBox(
