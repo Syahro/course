@@ -1,3 +1,4 @@
+import 'package:course/pages/akun_karya_page.dart';
 import 'package:course/pages/akun_kelas_page.dart';
 import 'package:course/theme.dart';
 import 'package:flutter/material.dart';
@@ -54,19 +55,34 @@ class UserMenu extends StatelessWidget {
           ),
           Expanded(
             flex: 5,
-            child: Container(
-              height: 28,
-              decoration: BoxDecoration(
-                color: isMadeBy ? whiteColor : Colors.transparent,
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Center(
-                child: Text(
-                  'Karya Saya',
-                  style: regularTextStyle.copyWith(
-                    fontSize: 14,
-                    color: isMadeBy ? blueColor : greyColor,
-                    fontWeight: FontWeight.w600,
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AkunKaryaPage(
+                        isClass: false,
+                        isMadeBy: true,
+                      );
+                    },
+                  ),
+                );
+              },
+              child: Container(
+                height: 28,
+                decoration: BoxDecoration(
+                  color: isMadeBy ? whiteColor : Colors.transparent,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                  child: Text(
+                    'Karya Saya',
+                    style: regularTextStyle.copyWith(
+                      fontSize: 14,
+                      color: isMadeBy ? blueColor : greyColor,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
