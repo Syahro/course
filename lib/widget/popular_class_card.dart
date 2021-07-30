@@ -35,9 +35,8 @@ class PopularClassCard extends StatelessWidget {
         builder: (context) => SingleChildScrollView(
           controller: ModalScrollController.of(context),
           child: Container(
-            margin: EdgeInsets.only(top: 0),
             width: double.infinity,
-            height: 500,
+            height: 600,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
