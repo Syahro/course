@@ -36,7 +36,9 @@ class AkunKelasPage extends StatelessWidget {
                   SizedBox(
                     height: 56,
                   ),
-                  HeaderUser(),
+                  HeaderUser(
+                    isCourseDetail: false,
+                  ),
                   SizedBox(
                     height: 16,
                   ),
