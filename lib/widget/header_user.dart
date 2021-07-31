@@ -74,32 +74,38 @@ class HeaderUser extends StatelessWidget {
               color: greyColor,
             ),
           ),
-          child: Center(
-            child: isCourseDetail
-                ? Row(
-                    children: [
-                      Image.asset(
-                        'assets/star.png',
-                        width: 18,
-                        height: 18,
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Text(
-                        'Rate Us',
-                        style: regularTextStyle.copyWith(
-                          fontSize: 14,
-                          color: blackColor,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              isCourseDetail
+                  ? Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/star.png',
+                          width: 18,
+                          height: 18,
                         ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          'Rate Us',
+                          style: regularTextStyle.copyWith(
+                            fontSize: 14,
+                            color: blackColor,
+                          ),
+                        ),
+                      ],
+                    )
+                  : Center(
+                      child: Image.asset(
+                        'assets/setting.png',
+                        width: 22,
+                        height: 22,
                       ),
-                    ],
-                  )
-                : Image.asset(
-                    'assets/setting.png',
-                    width: 22,
-                    height: 22,
-                  ),
+                    ),
+            ],
           ),
         )
       ],
